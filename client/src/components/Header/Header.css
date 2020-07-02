@@ -1,0 +1,19 @@
+header{
+    width: 100vw;
+    margin: 15px 0 50px;
+}
+
+header div{
+    display: flex;
+    max-width: 1000px;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+}
+
+header img{
+    max-width: 410px;
+    width: 100%;
+    min-width: 200px;
+    margin: 0 20px;
+}
