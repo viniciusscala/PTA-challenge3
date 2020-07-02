@@ -9,7 +9,6 @@ function Header(){
         <header>
             <div>
             <img src={logo} alt="Logo Xpace"/>
-            <Button>Menu</Button>
             </div>
         </header>
     );
