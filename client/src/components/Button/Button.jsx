@@ -2,7 +2,7 @@ import React from "react";
 //css
 import "./Button.css";
 
-function Button(props){
+function Button(){
     return(
         <button>{props.children}</button>
     );
