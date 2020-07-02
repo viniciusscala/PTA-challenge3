@@ -6,7 +6,7 @@ function Footer(){
     return(
         <footer>
             <div>
-                <p>Made with &lt/&gt and &lt3 CITi</p>
+                <p>Made with {"</>"} and {"<"}3 CITi</p>
             </div>
         </footer>
     );
