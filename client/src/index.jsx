@@ -14,7 +14,7 @@ function App() {
     <section className="app">
       {/* <Example /> */}
       <Header/>
-      <MenuItem/>
+      <MenuItem title="teste" description="testeee" price="10,00"/>
       <Footer/>
     </section>
   );
