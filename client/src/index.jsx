@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {
-  Example,
   Header,
   Button,
   MenuItem,
@@ -12,7 +11,6 @@ import {
 function App() {
   return (
     <section className="app">
-      {/* <Example /> */}
       <Header/>
       <MenuItem title="teste" description="testeee" price="10,00"/>
       <Footer/>
