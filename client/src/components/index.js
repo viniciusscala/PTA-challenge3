@@ -1,11 +1,9 @@
 import Header from './Header';
-import Button from './Button';
-import MenuItem from './MenuItem';
+import Menu from './Menu';
 import Footer from './Footer';
 
 export {
   Header,
-  Button,
-  MenuItem,
+  Menu,
   Footer
 };

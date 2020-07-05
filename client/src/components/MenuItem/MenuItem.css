@@ -1,3 +1,4 @@
+/* styles for the menu item */
 .MenuItem{
     display: flex;
     flex-direction: column;
@@ -5,7 +6,8 @@
     justify-content: space-between;
 }
 
-.MenuItem div{
+/* styles for the hole MenuItem except the <hr/> */
+.MenuItem .MenuItem-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,11 +15,13 @@
     height: 170px;
 }
 
-.MenuItem img{
+/* styles for the only img that MenuItem has*/
+.MenuItem .MenuItem-container img{
     max-width: 150px;
 }
 
-.MenuItem .text{
+/* Styles for the div that contains name, description and price of the MenuItem */
+.MenuItem .MenuItem-container .text{
     max-width: 500px;
     height: 130px;
     display: flex;
@@ -27,22 +31,26 @@
     margin: 0 20px;
 }
 
-.MenuItem .text p{
+/* Styles for the name, description and price */
+.MenuItem .MenuItem-container .text *{
+    margin: 0;
+}
+
+/* Styles for the description of the MenuItem */
+.MenuItem .MenuItem-container .text p{
     margin-top: 5px;
     font: Regular 30px/37px Montserrat;
 }
 
-.MenuItem .text *{
-    margin: 0;
-}
-
-.MenuItem .text .price{
+/* Styles for the price of the MenuItem */
+.MenuItem .MenuItem-container .text .price{
     margin-top: 10px;
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
 
+/* style for the horizontal line */
 .MenuItem hr{
     width: calc(100% + 40px);
     position: relative;
@@ -50,16 +58,16 @@
     border: solid rgba(0, 0, 0, 0.5) 0.2px;
 }
 
+/* It will make the MenuItem vertical and centered */
 @media screen and (max-width: 900px) {
-    .MenuItem div{
-        display: flex;
+    .MenuItem .MenuItem-container{
         flex-direction: column;
-        width: 100%;
         height: 350px;
         padding-bottom: 30px;
     }
 
-    .MenuItem .text{
+    .MenuItem .MenuItem-container .text{
         align-items: center;
+        text-align: center;
     }
 }

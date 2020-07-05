@@ -1,17 +1,16 @@
 import React from "react";
-import Button from "../Button"
-import logo from "./logo.png"
-//css
+import logo from "./img/logo.png";
+
 import "./Header.css";
 
-function Header(){
-    return(
-        <header className="Header">
-            <div>
-            <img src={logo} alt="Logo Xpace"/>
-            </div>
-        </header>
-    );
+function Header() {
+  return (
+    <header className="Header">
+      <div className="header-container">
+        <img src={logo} alt="Logo Xpace hot dog 19" />
+      </div>
+    </header>
+  );
 }
 
 export default Header;
