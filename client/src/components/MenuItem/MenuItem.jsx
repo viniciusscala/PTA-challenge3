@@ -8,10 +8,10 @@ function MenuItem(props){
         <div className="MenuItem">
             <div>
                 <img src={props.img[0].url} alt=""/>
-                <div class="text">
+                <div className="text">
                     <h2>{props.title}</h2>
                     <p>{props.description}</p>
-                    <p class="price">R$ {props.price}</p>
+                    <p className="price">R$ {props.price}</p>
                 </div>
                 <Button>Adicionar</Button>
             </div>
