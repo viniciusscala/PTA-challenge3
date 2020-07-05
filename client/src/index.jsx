@@ -11,10 +11,6 @@ import {
   Footer
 } from './components';
 
-import img1 from "./img/hot-dog1.png"
-import img2 from "./img/hot-dog2.png"
-import img3 from "./img/hot-dog3.png"
-
 function App() {
   const [itens, setItens] = React.useState([]);
 
