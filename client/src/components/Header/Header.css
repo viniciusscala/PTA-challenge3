@@ -1,3 +1,4 @@
+/* Styles for the hole header */
 .Header{
     width: 100vw;
     margin: 15px 0 100px;
@@ -5,13 +6,15 @@
     justify-content: center;
 }
 
-.Header div{
+/* Styles for the part of the header that has content */
+.Header .header-container{
     max-width: 1000px;
     width: 100%;
     margin: 0 20px;
 }
 
-.Header img{
+/* Styles fot the only img header has (the logo) */
+.Header .header-container img{
     max-width: 410px;
     width: 100%;
 }
