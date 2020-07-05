@@ -7,7 +7,7 @@ function MenuItem(props){
     return(
         <div className="MenuItem">
             <div>
-                <img src={props.img} alt=""/>
+                <img src={props.img[0].url} alt=""/>
                 <div class="text">
                     <h2>{props.title}</h2>
                     <p>{props.description}</p>

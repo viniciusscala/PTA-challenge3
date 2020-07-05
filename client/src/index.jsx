@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 import "./index.css"
 
@@ -15,6 +16,17 @@ import img2 from "./img/hot-dog2.png"
 import img3 from "./img/hot-dog3.png"
 
 function App() {
+  const [itens, setItens] = React.useState([]);
+
+  const loadItens = async () => {
+    const res = await axios.get('http://localhost:3001/api/menuitens');
+    setItens(res.data);
+  };
+
+  React.useEffect(() => {
+    loadItens();
+  }, []);
+
   return (
     <section className="app">
       <Header/>
@@ -24,15 +36,9 @@ function App() {
             <h1>Cardápio</h1>
             <input className="search" type="text"/>
           </div>
-          <MenuItem title="Hot dog clássico" description="Pão e salsicha do jeito que você já conhece e saboroso como você nunca viu." price="8,00" img={img1} />
-          <MenuItem title="Hot dog clássico" description="Pão e salsicha do jeito que você já conhece e saboroso como você nunca viu." price="8,00" img={img2} />
-          <MenuItem title="Hot dog clássico" description="Pão e salsicha do jeito que você já conhece e saboroso como você nunca viu." price="8,00" img={img3} />
-          <MenuItem title="Hot dog clássico" description="Pão e salsicha do jeito que você já conhece e saboroso como você nunca viu." price="8,00" img={img1} />
-          <MenuItem title="Hot dog clássico" description="Pão e salsicha do jeito que você já conhece e saboroso como você nunca viu." price="8,00" img={img2} />
-          <MenuItem title="Hot dog clássico" description="Pão e salsicha do jeito que você já conhece e saboroso como você nunca viu." price="8,00" img={img3} />
-          <MenuItem title="Hot dog clássico" description="Pão e salsicha do jeito que você já conhece e saboroso como você nunca viu." price="8,00" img={img1} />
-          <MenuItem title="Hot dog clássico" description="Pão e salsicha do jeito que você já conhece e saboroso como você nunca viu." price="8,00" img={img2} />
-          <MenuItem title="Hot dog clássico" description="Pão e salsicha do jeito que você já conhece e saboroso como você nunca viu." price="8,00" img={img3} />
+          {itens.map((item)=>{
+            return <MenuItem title={item.name} description={item.description} price={item.price} img={item.image} />
+          })}
         </div>
       </main>
       <Footer/>
