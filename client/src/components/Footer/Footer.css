@@ -1,16 +1,20 @@
-footer{
+.Footer{
     background-color: #F9C202;
     height: 50px;
-    font-weight: bold;
-    font-size: 15px;
-    width: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
 }
 
-footer div{
+.Footer div{
+    height: 100%; 
     max-width: 1000px;
-    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin: 0 auto;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 15px;
 }

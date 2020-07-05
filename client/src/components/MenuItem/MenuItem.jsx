@@ -5,14 +5,17 @@ import "./MenuItem.css";
 
 function MenuItem(props){
     return(
-        <div>
-            <img src="{props.img}" alt=""/>
-            <div class="text">
-                <h3>{props.title}</h3>
-                <p>{props.description}</p>
-                <p class="price">R$ {props.price}</p>
+        <div className="MenuItem">
+            <div>
+                <img src={props.img} alt=""/>
+                <div class="text">
+                    <h2>{props.title}</h2>
+                    <p>{props.description}</p>
+                    <p class="price">R$ {props.price}</p>
+                </div>
+                <Button>Adicionar</Button>
             </div>
-            <Button>Adicionar</Button>
+            <hr/>
         </div>
     );
 }
