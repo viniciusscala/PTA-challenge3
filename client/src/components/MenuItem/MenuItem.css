@@ -1,23 +1,65 @@
-div{
-    margin: 50px auto;
+.MenuItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.MenuItem div{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    max-width: 1000px;
+    width: 100%;
+    height: 170px;
 }
 
-.text{
+.MenuItem img{
+    max-width: 150px;
+}
+
+.MenuItem .text{
     max-width: 500px;
-    height: 154px;
+    height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
     margin: 0 20px;
 }
 
-.price{
+.MenuItem .text p{
+    margin-top: 5px;
+    font: Regular 30px/37px Montserrat;
+}
+
+.MenuItem .text *{
+    margin: 0;
+}
+
+.MenuItem .text .price{
+    margin-top: 10px;
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+}
+
+.MenuItem hr{
+    width: calc(100% + 40px);
+    position: relative;
+    right: 20px;
+    border: solid rgba(0, 0, 0, 0.5) 0.2px;
+}
+
+@media screen and (max-width: 900px) {
+    .MenuItem div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 350px;
+        padding-bottom: 30px;
+    }
+
+    .MenuItem .text{
+        align-items: center;
+    }
 }

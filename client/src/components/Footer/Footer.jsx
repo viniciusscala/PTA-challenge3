@@ -4,7 +4,7 @@ import "./Footer.css";
 
 function Footer(){
     return(
-        <footer>
+        <footer className="Footer">
             <div>
                 <p>Made with {"</>"} and {"<"}3 CITi</p>
             </div>
